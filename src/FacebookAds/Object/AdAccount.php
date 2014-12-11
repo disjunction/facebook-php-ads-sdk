@@ -325,33 +325,33 @@ class AdAccount extends AbstractCrudObject {
   /**
    * @param array $fields
    * @param array $params
-   * @return AdStats
+   * @return Cursor
    */
   public function getConversions(
     array $fields = array(), array $params = array()) {
-    return $this->getOneByConnection(
+    return $this->getManyByConnection(
       AdStats::className(), $fields, $params, 'conversions');
   }
 
   /**
    * @param array $fields
    * @param array $params
-   * @return AdStats
+   * @return Cursor
    */
   public function getAdCampaignConversions(
     array $fields = array(), array $params = array()) {
-    return $this->getOneByConnection(
+    return $this->getManyByConnection(
       AdStats::className(), $fields, $params, 'adcampaignconversions');
   }
 
   /**
    * @param array $fields
    * @param array $params
-   * @return AdStats
+   * @return Cursor
    */
   public function getAdgroupConversions(
     array $fields = array(), array $params = array()) {
-    return $this->getOneByConnection(
+    return $this->getManyByConnection(
       AdStats::className(), $fields, $params, 'adgroupconversions');
   }
 
